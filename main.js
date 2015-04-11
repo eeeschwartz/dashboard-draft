@@ -36,9 +36,9 @@ var rowHtml = function(widgets) {
   });
   return '<div class="row top-buffer">' + widgets.join('') + '</div>';
 };
-var widgetsHtml = rowHtml([
-  widgetsByName['lexingtonky-visitors'],
-  widgetsByName['raids-online'],
-  widgetsByName['building-permits'],
-]);
+var widgetsHtml =
+  rowHtml([ widgetsByName['lexingtonky-visitors'], widgetsByName['raids-online'], widgetsByName['building-permits']])
+  + rowHtml([ widgetsByName['building-permits'], widgetsByName['lexingtonky-visitors'], widgetsByName['raids-online']])
+  + rowHtml([ widgetsByName['raids-online'], widgetsByName['building-permits'], widgetsByName['lexingtonky-visitors']]);
+
 $('#widgets').html(widgetsHtml);
