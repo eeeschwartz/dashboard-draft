@@ -1,0 +1,29 @@
+iframe {
+  overflow-y: hidden;
+}
+.top-buffer {
+  margin-top:20px;
+}
+.panel {
+  border: none;
+}
+.panel-default> .panel-heading {
+  border: none;
+  color: #C2C9CB;
+  background-color: #2A2A2A;
+  /* padding-left: 0; */
+}
+body {
+  background-color: black;
+}
+.widget {
+}
+.panel-title {
+  font-size: 150%;
+}
+.panel-body {
+  padding: 0;
+}
+.col {
+  padding: 0 7px 0 7px;
+}

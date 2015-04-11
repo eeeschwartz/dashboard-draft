@@ -6,102 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Computer Services (demo)</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-    <style>
-        iframe {
-          overflow-y: hidden;
-        }
-        .top-buffer {
-          margin-top:20px;
-        }
-        .panel-title {
-          font-size: 150%;
-        }
-    </style>
+    <link rel="stylesheet" href="bootstrap-overrides.css">
   </head>
   <body>
-    <div class="container-fluid">
-      <div id="widgets" class="row top-buffer">
-    <!--     <div class="col&#45;md&#45;6"> -->
-    <!--       <div class="embed&#45;responsive embed&#45;responsive&#45;16by9"> -->
-    <!--         <iframe seamless="seamless" scrolling="no" class="embed&#45;responsive&#45;item" src="http://www.raidsonline.com/?address=Lexington,%20KY"></iframe> -->
-    <!--       </div> -->
-    <!--     </div> -->
-    <!--   </div> -->
-    <!--   <div class="row top&#45;buffer"> -->
-    <!--     <div class="col&#45;md&#45;6"> -->
-    <!--       <div class="embed&#45;responsive embed&#45;responsive&#45;16by9"> -->
-    <!--         <iframe seamless="seamless" scrolling="no" class="embed&#45;responsive&#45;item" src="http://lexingtonky&#45;visitors.herokuapp.com"></iframe> -->
-    <!--       </div> -->
-    <!--     </div> -->
-    <!--     <div class="col&#45;md&#45;6"> -->
-    <!--       <div class="embed&#45;responsive embed&#45;responsive&#45;16by9"> -->
-    <!--         <iframe seamless="seamless" scrolling="no" class="embed&#45;responsive&#45;item" src="http://www.raidsonline.com/?address=Lexington,%20KY"></iframe> -->
-    <!--       </div> -->
-    <!--     </div> -->
-    <!--   </div> -->
-    <!-- </div> -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script>
-      var widgetHtml = function(widget) {
-        var widgetTitle = widget.title;
-        var widgetUrl = widget.url;
-        return '<div class="col-md-' + columnSize + '">'
-         + '  <div class="panel panel-default">'
-         + '    <div class="panel-heading">'
-         + '      <h3 class="panel-title">' + widgetTitle + '</h3>'
-         + '    </div>'
-         + '    <div class="panel-body">'
-         + '      <div class="embed-responsive embed-responsive-16by9">'
-         + '        <iframe seamless="seamless" scrolling="no" class="embed-responsive-item" src="' + widgetUrl + '" style="font-size: 50%"></iframe>'
-         + '      </div>'
-         + '    </div>'
-         + '  </div>'
-         + '</div>'
-      }
-      var columns = 12; //bootstrap default
-      var perRow = 2;
-      var columnSize = columns / perRow;
-      var widgetOffset = 0;
-      var numRows = 2;
-      var row = 0;
-      var widget = widgetOffset;
-      var widgets = [
-        {
-          title: "Panel title",
-          url: "http://lexingtonky-visitors.herokuapp.com"
-        },
-        {
-          title: "Panel title",
-          url: "http://lexingtonky-visitors.herokuapp.com"
-        },
-        {
-          title: "Panel title",
-          url: "http://lexingtonky-visitors.herokuapp.com"
-        },
-        {
-          title: "Panel title",
-          url: "http://lexingtonky-visitors.herokuapp.com"
-        }
-      ];
-
-
-      var html = '';
-      for (row; row < numRows; row++) {
-        var rowHtml = '<div class="row">';
-        for (i; i < perRow; i++) {
-          console.log(i);
-          var widget = widgets[i];
-          if (widget) {
-            rowHtml += widgetHtml(widget);
-          }
-        }
-        rowHtml += '</div>'
-        // debugger;
-        html += rowHtml;
-
-      }
-      $('#widgets').append(html);
-
     </script>
+    <div id="widgets" class="container-fluid">
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.6.0/lodash.js"></script>
+    <script src="main.js"></script>
   </body>
 </html>
