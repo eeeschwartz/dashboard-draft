@@ -11,23 +11,39 @@
   </head>
   <body>
     </script>
-    <div role="tabpanel">
+      <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+          <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+        </ol>
 
-      <!-- Nav tabs -->
-      <ul class="nav nav-tabs" role="tablist">
-        <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
-        <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Profile</a></li>
-      </ul>
-
-      <!-- Tab panes -->
-      <div class="tab-content">
-        <div role="tabpanel" class="tab-pane fade active" id="home">
-          <div id="widgets-1" class="container-fluid"></div>
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+          <div class="item active">
+            <div id="widgets-1" class="container-fluid"></div>
+          </div>
+          <div class="item">
+            <div id="widgets-2" class="container-fluid"></div>
+          </div>
         </div>
-        <div role="tabpanel" class="tab-pane fade" id="profile">profile</div>
       </div>
-
-    </div>
+    <!-- <div role="tabpanel"> -->
+      <!-- <!&#45;&#45; Nav tabs &#45;&#45;> -->
+      <!-- <ul class="nav nav&#45;tabs" role="tablist"> -->
+      <!--   <li role="presentation" class="active"><a href="#home" aria&#45;controls="home" role="tab" data&#45;toggle="tab">Home</a></li> -->
+      <!--   <li role="presentation"><a href="#profile" aria&#45;controls="profile" role="tab" data&#45;toggle="tab">Profile</a></li> -->
+      <!-- </ul> -->
+      <!--  -->
+      <!-- <!&#45;&#45; Tab panes &#45;&#45;> -->
+      <!-- <div class="tab&#45;content"> -->
+      <!--   <div role="tabpanel" class="tab&#45;pane fade active" id="home"> -->
+      <!--     <div id="widgets&#45;1" class="container&#45;fluid"></div> -->
+      <!--   </div> -->
+      <!--   <div role="tabpanel" class="tab&#45;pane fade" id="profile">profile</div> -->
+      <!-- </div> -->
+      <!--  -->
+    <!-- </div> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.6.0/lodash.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
@@ -42,9 +58,10 @@
       $('#widgets-2').html(widgetsHtml);
     </script>
     <script>
-      $(function () {
-        $('#myTab a:last').tab('show')
-      })
+      $('.carousel').carousel()
+      // $(function () {
+      //   $('#myTab a:last').tab('show')
+      // })
     </script>
   </body>
 </html>
