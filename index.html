@@ -10,58 +10,43 @@
     <link rel="stylesheet" href="bootstrap-overrides.css">
   </head>
   <body>
-    </script>
-      <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-        <!-- Indicators -->
-        <ol class="carousel-indicators">
-          <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-          <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-        </ol>
+    <div role="tabpanel">
+      <!-- Nav tabs -->
+      <ul class="nav nav-tabs" role="tablist">
+        <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Page 1</a></li>
+        <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Page 2</a></li>
+      </ul>
 
-        <!-- Wrapper for slides -->
-        <div class="carousel-inner" role="listbox">
-          <div class="item active">
-            <div id="widgets-1" class="container-fluid"></div>
-          </div>
-          <div class="item">
-            <div id="widgets-2" class="container-fluid"></div>
-          </div>
+      <!-- Tab panes -->
+      <div class="tab-content">
+        <div role="tabpanel" class="tab-pane fade in active" id="home">
+          <div id="widgets-1" class="">page 1</div>
+        </div>
+        <div role="tabpanel" class="tab-pane fade" id="profile">
+          <div id="widgets-2" class="">page 2</div>
         </div>
       </div>
-    <!-- <div role="tabpanel"> -->
-      <!-- <!&#45;&#45; Nav tabs &#45;&#45;> -->
-      <!-- <ul class="nav nav&#45;tabs" role="tablist"> -->
-      <!--   <li role="presentation" class="active"><a href="#home" aria&#45;controls="home" role="tab" data&#45;toggle="tab">Home</a></li> -->
-      <!--   <li role="presentation"><a href="#profile" aria&#45;controls="profile" role="tab" data&#45;toggle="tab">Profile</a></li> -->
-      <!-- </ul> -->
-      <!--  -->
-      <!-- <!&#45;&#45; Tab panes &#45;&#45;> -->
-      <!-- <div class="tab&#45;content"> -->
-      <!--   <div role="tabpanel" class="tab&#45;pane fade active" id="home"> -->
-      <!--     <div id="widgets&#45;1" class="container&#45;fluid"></div> -->
-      <!--   </div> -->
-      <!--   <div role="tabpanel" class="tab&#45;pane fade" id="profile">profile</div> -->
-      <!-- </div> -->
-      <!--  -->
-    <!-- </div> -->
+    </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.6.0/lodash.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     <script src="main.js"></script>
     <script>
-      var widgetsHtml = rowHtml([ widgetsByName['building-permits'], widgetsByName['raids-online'] ])
-        + rowHtml([ widgetsByName['lexingtonky-visitors'], widgetsByName['tweetbeam'] ])
-      $('#widgets-1').html(widgetsHtml);
-
-      var widgetsHtml = rowHtml([ widgetsByName['tweetbeam'], widgetsByName['lexingtonky-visitors'] ])
-        + rowHtml([ widgetsByName['raids-online'], widgetsByName['building-permits'] ])
-      $('#widgets-2').html(widgetsHtml);
+      // var widgetsHtml = rowHtml([ widgetsByName['building-permits'], widgetsByName['raids-online'] ])
+      //   + rowHtml([ widgetsByName['lexingtonky-visitors'], widgetsByName['tweetbeam'] ])
+      // $('#widgets-1').html(widgetsHtml);
+      //
+      // var widgetsHtml2 = rowHtml([ widgetsByName['tweetbeam'], widgetsByName['lexingtonky-visitors'] ])
+      //   + rowHtml([ widgetsByName['raids-online'], widgetsByName['building-permits'] ])
+      // $('#widgets-2').html(widgetsHtml2);
     </script>
     <script>
-      $('.carousel').carousel()
-      // $(function () {
-      //   $('#myTab a:last').tab('show')
-      // })
+      $(function () {
+        setTimeout(function() {
+          debugger
+          $('#profile').tab('show');
+        }, 1000);
+      })
     </script>
   </body>
 </html>
