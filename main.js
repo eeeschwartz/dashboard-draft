@@ -30,15 +30,9 @@ var widgetsByName = {
   },
 };
 var rowHtml = function(widgets) {
-  var colWidth = 4;
+  var colWidth = 6;
   var widgets = _.map(widgets, function(widget) {
     return widgetHtml(widget, colWidth);
   });
   return '<div class="row top-buffer">' + widgets.join('') + '</div>';
 };
-var widgetsHtml =
-  rowHtml([ widgetsByName['lexingtonky-visitors'], widgetsByName['raids-online'], widgetsByName['building-permits']])
-  + rowHtml([ widgetsByName['building-permits'], widgetsByName['lexingtonky-visitors'], widgetsByName['raids-online']])
-  + rowHtml([ widgetsByName['raids-online'], widgetsByName['building-permits'], widgetsByName['lexingtonky-visitors']]);
-
-$('#widgets').html(widgetsHtml);
