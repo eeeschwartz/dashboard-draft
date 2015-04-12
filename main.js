@@ -31,6 +31,10 @@ var widgetsByName = {
   'tweetbeam': {
     title: 'Twitter activity',
     url: 'http://www.tweetbeam.com/show?query=lexington%2C%20ky'
+  },
+  'cartoon': {
+    title: 'Joel Petit Cartoon',
+    url: 'cartoon.html'
   }
 };
 var rowHtml = function(widgets) {
