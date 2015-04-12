@@ -37,12 +37,13 @@
     <script>
       $(function () {
         var widgetsHtml = rowHtml([ widgetsByName['building-permits'], widgetsByName['raids-online'] ])
-          + rowHtml([ widgetsByName['lexingtonky-visitors'], widgetsByName['tweetbeam'] ])
+          + rowHtml([ widgetsByName['lexingtonky-visitors'], widgetsByName['traffic'] ])
         $('#widgets-1').html(widgetsHtml);
-        //
-        var widgetsHtml2 = rowHtml([ widgetsByName['cartoon'], widgetsByName['lexingtonky-visitors'] ])
-          + rowHtml([ widgetsByName['raids-online'], widgetsByName['building-permits'] ])
+
+        var widgetsHtml2 = rowHtml([ widgetsByName['cartoon'], widgetsByName['tweetbeam'] ])
+          + rowHtml([ widgetsByName['lexingtonky-visitors'], widgetsByName['building-permits'] ])
         $('#widgets-2').html(widgetsHtml2);
+
         setInterval(function() {
           $('.nav-tabs :not(.active) a').click();
         }, 15000);

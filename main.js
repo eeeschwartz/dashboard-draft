@@ -25,12 +25,16 @@ var widgetsByName = {
     url: "http://raidsonline.com/?address=Lexington,%20KY&zoom=12"
   },
   'building-permits': {
-    title: "Weekly building permits",
+    title: "Weekly Building Permits",
     url: "http://www.charted.co/?{%22dataUrl%22%3A%22https%3A%2F%2Fdl.dropboxusercontent.com%2Fu%2F70416620%2Fbuilding-permits-year-over-year.csv%22%2C%22color%22%3A%22dark%22%2C%22charts%22%3A[{%22title%22%3A%22Weekly%20Permits%22}]}"
   },
   'tweetbeam': {
-    title: 'Twitter activity',
+    title: 'Twitter Activity',
     url: 'http://www.tweetbeam.com/show?query=lexington%2C%20ky'
+  },
+  'traffic': {
+    title: 'Traffic Overview',
+    url: 'https://bluetoad.trafficcast.com/map/standalone?key=bbutsRLTdoPlhkw2lzDOdw%3D%3D&fullscreen=1'
   },
   'cartoon': {
     title: 'Joel Petit Cartoon',
