@@ -11,15 +11,40 @@
   </head>
   <body>
     </script>
-    <div id="widgets" class="container-fluid">
+    <div role="tabpanel">
+
+      <!-- Nav tabs -->
+      <ul class="nav nav-tabs" role="tablist">
+        <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
+        <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Profile</a></li>
+      </ul>
+
+      <!-- Tab panes -->
+      <div class="tab-content">
+        <div role="tabpanel" class="tab-pane fade active" id="home">
+          <div id="widgets-1" class="container-fluid"></div>
+        </div>
+        <div role="tabpanel" class="tab-pane fade" id="profile">profile</div>
+      </div>
+
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.6.0/lodash.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     <script src="main.js"></script>
     <script>
       var widgetsHtml = rowHtml([ widgetsByName['building-permits'], widgetsByName['raids-online'] ])
         + rowHtml([ widgetsByName['lexingtonky-visitors'], widgetsByName['tweetbeam'] ])
-      $('#widgets').html(widgetsHtml);
+      $('#widgets-1').html(widgetsHtml);
+
+      var widgetsHtml = rowHtml([ widgetsByName['tweetbeam'], widgetsByName['lexingtonky-visitors'] ])
+        + rowHtml([ widgetsByName['raids-online'], widgetsByName['building-permits'] ])
+      $('#widgets-2').html(widgetsHtml);
+    </script>
+    <script>
+      $(function () {
+        $('#myTab a:last').tab('show')
+      })
     </script>
   </body>
 </html>
