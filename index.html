@@ -10,42 +10,36 @@
     <link rel="stylesheet" href="bootstrap-overrides.css">
   </head>
   <body>
-    <div role="tabpanel">
-      <!-- Nav tabs -->
-      <ul class="nav nav-tabs" role="tablist">
-        <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Page 1</a></li>
-        <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Page 2</a></li>
-      </ul>
+    <ul class="nav nav-tabs" role="tablist" id="myTab">
+      <li role="presentation" class="active"><a href="#page-1" aria-controls="page-1" role="tab" data-toggle="tab">Page 1</a></li>
+      <li role="presentation"><a href="#page-2" aria-controls="page-2" role="tab" data-toggle="tab">Page 2</a></li>
+    </ul>
 
-      <!-- Tab panes -->
-      <div class="tab-content">
-        <div role="tabpanel" class="tab-pane fade in active" id="home">
-          <div id="widgets-1" class="">page 1</div>
-        </div>
-        <div role="tabpanel" class="tab-pane fade" id="profile">
-          <div id="widgets-2" class="">page 2</div>
-        </div>
+    <div class="tab-content">
+      <div role="tabpanel" class="tab-pane fade in active" id="page-1">
+        <div id="widgets-1" class=""></div>
+      </div>
+      <div role="tabpanel" class="tab-pane fade" id="page-2">
+        <div id="widgets-2" class=""></div>
       </div>
     </div>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.6.0/lodash.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     <script src="main.js"></script>
     <script>
-      // var widgetsHtml = rowHtml([ widgetsByName['building-permits'], widgetsByName['raids-online'] ])
-      //   + rowHtml([ widgetsByName['lexingtonky-visitors'], widgetsByName['tweetbeam'] ])
-      // $('#widgets-1').html(widgetsHtml);
-      //
-      // var widgetsHtml2 = rowHtml([ widgetsByName['tweetbeam'], widgetsByName['lexingtonky-visitors'] ])
-      //   + rowHtml([ widgetsByName['raids-online'], widgetsByName['building-permits'] ])
-      // $('#widgets-2').html(widgetsHtml2);
-    </script>
-    <script>
       $(function () {
-        setTimeout(function() {
-          debugger
-          $('#profile').tab('show');
-        }, 1000);
+        var widgetsHtml = rowHtml([ widgetsByName['building-permits'], widgetsByName['raids-online'] ])
+          + rowHtml([ widgetsByName['lexingtonky-visitors'], widgetsByName['tweetbeam'] ])
+        $('#widgets-1').html(widgetsHtml);
+        //
+        var widgetsHtml2 = rowHtml([ widgetsByName['tweetbeam'], widgetsByName['lexingtonky-visitors'] ])
+          + rowHtml([ widgetsByName['raids-online'], widgetsByName['building-permits'] ])
+        $('#widgets-2').html(widgetsHtml2);
+        setInterval(function() {
+          // $('.nav-tabs :not(.active) a').click();
+        }, 15000);
       })
     </script>
   </body>

@@ -2,19 +2,26 @@ iframe {
   overflow-y: hidden;
 }
 .top-buffer {
-  margin-top:20px;
+  margin-top:10px;
 }
 .panel {
   border: none;
 }
-.panel-default> .panel-heading {
+.panel-default> .panel-heading,
+.nav-tabs>li.active>a,
+.nav-tabs>li.active {
   border: none;
   color: #C2C9CB;
   background-color: #2A2A2A;
-  /* padding-left: 0; */
+}
+.nav-tabs>li>a {
+  color: #C2C9CB;
 }
 body {
   background-color: black;
+}
+.nav-tabs {
+  border: none;
 }
 .widget {
 }
