@@ -2,11 +2,17 @@ iframe {
   overflow-y: hidden;
 }
 .top-buffer {
-  margin-top:10px;
+  margin-top:7px;
 }
 .panel {
   border: none;
 }
+
+/* match tab */
+.panel-default> .panel-heading {
+  padding: 13px 20px;
+}
+
 .panel-default> .panel-heading,
 .nav-tabs>li.active>a,
 .nav-tabs>li.active {
@@ -25,12 +31,13 @@ body {
 }
 .widget {
 }
-.panel-title {
-  font-size: 150%;
+.panel-title,
+.nav-tabs a {
+  /* font-size: 21px; */
 }
 .panel-body {
   padding: 0;
 }
 .col {
-  padding: 0 7px 0 7px;
+  padding: 0 0 0 20px;
 }

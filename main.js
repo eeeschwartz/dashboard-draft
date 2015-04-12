@@ -22,7 +22,7 @@ var widgetsByName = {
   },
   'raids-online': {
     title: "Crime Map",
-    url: "http://www.raidsonline.com/?address=Lexington,%20KY"
+    url: "http://raidsonline.com/?address=Lexington,%20KY&zoom=12"
   },
   'building-permits': {
     title: "Weekly building permits",
