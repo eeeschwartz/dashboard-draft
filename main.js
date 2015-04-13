@@ -1,11 +1,37 @@
 var widgetHtml = function(widget, columnSize) {
+  // var widgetTitle = widget.title;
+  // var widgetUrl = widget.url;
+  // var titleHtml = '';
+  //
+  // if (widgetTitle) {
+  //   titleHtml = '    <div class="panel-heading">'
+  //    + '      <h3 class="panel-title"><a href="' + widgetUrl + '" target="_blank">' + widgetTitle + '</a></h3>'
+  //    + '    </div>'
+  //  }
+  //
+  // return '<div class="widget col col-md-' + columnSize + '">'
+  //  + '  <div class="panel panel-default">'
+  //  + '    <div class="panel-body">'
+  //  + titleHtml
+  //  + '      <div class="embed-responsive embed-responsive-16by9">'
+  //  + '        <iframe seamless="seamless" scrolling="no" class="embed-responsive-item" src="' + widgetUrl + '" style="font-size: 50%"></iframe>'
+  //  + '      </div>'
+  //  + '    </div>'
+  //  + '  </div>'
+  //  + '</div>'
   var widgetTitle = widget.title;
   var widgetUrl = widget.url;
+  var titleHtml = '';
+
+  if (widgetTitle) {
+    titleHtml = '    <div class="panel-heading">'
+     + '      <h3 class="panel-title"><a href="' + widgetUrl + '" target="_blank">' + widgetTitle + '</a></h3>'
+     + '    </div>'
+   }
+
   return '<div class="widget col col-md-' + columnSize + '">'
    + '  <div class="panel panel-default">'
-   + '    <div class="panel-heading">'
-   + '      <h3 class="panel-title"><a href="' + widgetUrl + '" target="_blank">' + widgetTitle + '</a></h3>'
-   + '    </div>'
+   + titleHtml
    + '    <div class="panel-body">'
    + '      <div class="embed-responsive embed-responsive-16by9">'
    + '        <iframe seamless="seamless" scrolling="no" class="embed-responsive-item" src="' + widgetUrl + '" style="font-size: 50%"></iframe>'
@@ -31,6 +57,9 @@ var widgetsByName = {
   'tweetbeam': {
     title: 'Twitter Activity',
     url: 'http://www.tweetbeam.com/show?query=lexington%2C%20ky'
+  },
+  'twitter-timeline': {
+    url: 'twitter.html',
   },
   'traffic': {
     title: 'Traffic Overview',
