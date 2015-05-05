@@ -59,7 +59,7 @@ var widgetsByName = {
     url: 'https://bluetoad.trafficcast.com/map/standalone?key=bbutsRLTdoPlhkw2lzDOdw%3D%3D&fullscreen=1'
   },
   'cartoon': {
-    title: 'Joel Petit Cartoon',
+    title: 'Joel Pett Cartoon',
     url: 'cartoon.html'
   }
 };
