@@ -42,11 +42,15 @@ var widgetsByName = {
   },
   'building-permits': {
     title: "Weekly Building Permits",
-    url: "http://www.charted.co/?{%22dataUrl%22%3A%22https%3A%2F%2Fdl.dropboxusercontent.com%2Fu%2F70416620%2Fbuilding-permits-year-over-year.csv%22%2C%22color%22%3A%22dark%22%2C%22charts%22%3A[{%22title%22%3A%22Weekly%20Permits%22}]}"
+    url: "http://charte.herokuapp.com/?%7B%22dataUrl%22%3A%22https%3A%2F%2Fdocs.google.com%2Fspreadsheets%2Fd%2F1GRcqZCmAbPTrSHwULfw2j9RESyUc1an7109cyfHonIY%2Fpub%3Fgid%3D624646597%26single%3Dtrue%26output%3Dcsv%22%2C%22color%22%3A%22dark%22%2C%22charts%22%3A%5B%7B%22type%22%3A%22line%22%7D%5D%7D"
   },
   'tweetbeam': {
     title: 'Twitter Activity',
     url: 'http://www.tweetbeam.com/show?query=lexington%2C%20ky'
+  },
+  'fire-status': {
+    title: 'Fire Department Status',
+    url: 'http://fire.lexingtonky.gov/open/status/status.htm'
   },
   'twitter-1': {
     url: 'twitter-1',
