@@ -47,7 +47,7 @@ var widgetsByName = {
   },
   'building-permits': {
     title: "Building Permits YTD",
-    url: "http://charte.herokuapp.com/?%7B%22dataUrl%22%3A%22https%3A%2F%2Fdocs.google.com%2Fspreadsheets%2Fd%2F1GRcqZCmAbPTrSHwULfw2j9RESyUc1an7109cyfHonIY%2Fpub%3Fgid%3D624646597%26single%3Dtrue%26output%3Dcsv%22%2C%22color%22%3A%22dark%22%2C%22charts%22%3A%5B%7B%22type%22%3A%22line%22%7D%5D%7D"
+    url: "http://charte.herokuapp.com/?%7B%22dataUrl%22%3A%22https%3A%2F%2Fdocs.google.com%2Fspreadsheets%2Fd%2F1GRcqZCmAbPTrSHwULfw2j9RESyUc1an7109cyfHonIY%2Fpub%3Fgid%3D624646597%26single%3Dtrue%26output%3Dcsv%22%2C%22color%22%3A%22dark%22%2C%22charts%22%3A%5B%7B%22type%22%3A%22line%22%2C%22title%22%3A%22Building%20Permits%20YTD%22%7D%5D%7D"
   },
   'code-cases': {
     title: "Code Enforcement Cases YTD",
