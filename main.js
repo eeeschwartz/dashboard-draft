@@ -13,6 +13,11 @@ var widgetHtml = function(widget, columnSize) {
       + '<a data-chrome="nofooter noscrollbar" class="twitter-timeline" href="https://twitter.com/search?q=%40jimgraylexky" data-widget-id="587731792108646400">Tweets about @jimgraylexky</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?\'http\':\'https\';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>'
     + '</div>';
   }
+  if (widgetUrl === 'twitter-3') {
+    return '<div class="widget col col-md-6 text-center">'
+      + '<a data-chrome="nofooter noscrollbar" class="twitter-timeline" href="https://twitter.com/heraldleader" data-widget-id="638906092337111040">Tweets by @heraldleader</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?\'http\':\'https\';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>'
+    + '</div>';
+  }
   if (widgetTitle) {
     titleHtml = '    <div class="panel-heading">'
      + '      <h3 class="panel-title"><a href="' + widgetUrl + '" target="_blank">' + widgetTitle + '</a></h3>'
@@ -41,8 +46,12 @@ var widgetsByName = {
     url: "http://raidsonline.com/?address=Lexington,%20KY&zoom=12"
   },
   'building-permits': {
-    title: "Weekly Building Permits",
+    title: "Building Permits YTD",
     url: "http://charte.herokuapp.com/?%7B%22dataUrl%22%3A%22https%3A%2F%2Fdocs.google.com%2Fspreadsheets%2Fd%2F1GRcqZCmAbPTrSHwULfw2j9RESyUc1an7109cyfHonIY%2Fpub%3Fgid%3D624646597%26single%3Dtrue%26output%3Dcsv%22%2C%22color%22%3A%22dark%22%2C%22charts%22%3A%5B%7B%22type%22%3A%22line%22%7D%5D%7D"
+  },
+  'code-cases': {
+    title: "Code Enforcement Cases YTD",
+    url: "http://charte.herokuapp.com/?%7B%22dataUrl%22%3A%22https%3A%2F%2Fdocs.google.com%2Fspreadsheets%2Fd%2F1N9sq6kdJ0lmIBSckgDqp8gdN1Vg03TFekdXgy1HM7fo%2Fpub%3Fgid%3D1042946424%26single%3Dtrue%26output%3Dcsv%22%2C%22color%22%3A%22dark%22%2C%22charts%22%3A%5B%7B%22type%22%3A%22line%22%2C%22title%22%3A%22Code%20Enforcement%20Cases%22%7D%5D%7D"
   },
   'tweetbeam': {
     title: 'Twitter Activity',
@@ -57,6 +66,9 @@ var widgetsByName = {
   },
   'twitter-2': {
     url: 'twitter-2',
+  },
+  'twitter-3': {
+    url: 'twitter-3',
   },
   'traffic': {
     title: 'Traffic Overview',
